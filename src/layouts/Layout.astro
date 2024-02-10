@@ -1,13 +1,13 @@
 ---
-import '@fontsource-variable/inter' // Supports weights 100-900
-import '../styles/main.css'
+import '@fontsource-variable/inter'; // Supports weights 100-900
+import '../styles/main.css';
 
 interface Props {
-	title: string
-	description: string // Add the 'description' property
+	title: string;
+	description: string; // Add the 'description' property
 }
 
-const { title, description } = Astro.props
+const {title, description} = Astro.props;
 ---
 
 <!doctype html>
@@ -19,16 +19,24 @@ const { title, description } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<link rel="preload" href="/fonts/CascadiaCodePL.woff2" as="font" type="font/woff2" crossorigin />
 	</head>
 	<body class="block h-screen w-screen bg-black text-white antialiased">
 		<div
-			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
+			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
 		</div>
 		<slot />
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: 'Cascadia Code PL';
+		font-style: normal;
+		font-weight: 400;
+		font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+		src: url('/fonts/CascadiaCodePL.woff2') format('woff2');
+	}
 	html {
 		scroll-behavior: smooth;
 	}
@@ -83,6 +91,4 @@ const { title, description } = Astro.props
 	.bghover-redtoorange {
 		@apply hover:bg-gradient-to-r hover:from-red-400 hover:to-orange-600 hover:bg-clip-text  hover:text-transparent;
 	}
-
-	
 </style>
