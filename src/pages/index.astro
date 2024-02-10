@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro'
+import IconLinkedIn from '../icons/IconLinkedIn.astro'
+import IconGitHub from '../icons/IconGitHub.astro'
+import IconMenu from '../icons/IconMenu.astro'
+import IconConfig from '../icons/IconConfig.astro'
+import IconX from '../icons/IconX.astro'
+import LogoNav from '../components/LogoNav.astro'
+import BottonAvailable from '../components/BottonAvailable.astro'
+
+// const logotipo = '<ManuelDenis developer={mandendev} />'
+// const logotipo = '<ManuelDenis />'
+---
+
+<Layout
+	title="<ManuelDenis developer={full.Stack} content={portafolio} />"
+	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Con habilidades en tecnologías front-end y back-end, estoy listo para aportar soluciones innovadoras. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'
+>
+	<!-- Contenedor Principal -->
+	<div class="">
+		<!-- Contenedor de las barras de navegacion -->
+		<div class="">
+			<header class="bg-black/50">
+				<!-- Barra de navegacion Escritorio -->
+				<nav class="mx-auto flex h-[5rem] max-w-screen-2xl items-center justify-between px-4">
+					<LogoNav />
+					<ul class="hidden flex-row items-center lg:ml-2 lg:flex lg:gap-8 xl:ml-16 xl:gap-16">
+						<li>
+							<a
+								class="decoration-purple-500 decoration-wavy underline-offset-4 hover:underline"
+								href="/experiencia">Experiencia</a
+							>
+						</li>
+						<li>
+							<a
+								class="decoration-pink-600 decoration-wavy underline-offset-4 hover:underline"
+								href="/proyecto">Proyectos</a
+							>
+						</li>
+						<li>
+							<a
+								class="decoration-orange-400 decoration-wavy underline-offset-4 hover:underline"
+								href="/sobremi">Sobre mí</a
+							>
+						</li>
+						<li>
+							<a
+								class="decoration-cyan-500 decoration-wavy underline-offset-4 hover:underline"
+								href="/contacto">Contacto</a
+							>
+						</li>
+					</ul>
+					<div class="ml-16 hidden lg:flex-1">
+						<button class="link hidden items-center lg:flex"><IconConfig class="w-6" /></button>
+					</div>
+					<div class="hidden items-center lg:flex lg:gap-4">
+						<a class="link" href="#"><IconGitHub class="w-6" /></a>
+						<a class="link" href="#"><IconLinkedIn class="w-6" /></a>
+						<a class="link" href="#"><IconX class="w-6" /></a>
+					</div>
+					<button class="w-6 text-right lg:hidden"><IconMenu /></button>
+				</nav>
+				<!-- Barra de navegacion Movil -->
+				<div class="hidden bg-orange-800 lg:hidden">
+					<nav>
+						<ul>
+							<li><a href="/experiencia">Experiencia</a></li>
+							<li><a href="/proyecto">Proyectos</a></li>
+							<li><a href="/sobremi">Sobre mí</a></li>
+							<li><a href="/contacto">Contacto</a></li>
+						</ul>
+					</nav>
+					<div>
+						<div>
+							<a href="#">GH</a>
+							<a href="#">LI</a>
+						</div>
+						<button>¿Hablamos?</button>
+					</div>
+				</div>
+			</header>
+			<hr class="border-t border-white/10 shadow-lg" />
+		</div>
+		<main class="mx-auto max-w-screen-xl px-4">
+			<section class="relative grid content-container content-center justify-center">
+				<div class="flex flex-col items-center justify-center gap-16 lg:flex-row">
+					<aside
+						class="flex max-w-lg flex-col items-center justify-center gap-16 lg:items-start lg:gap-8"
+					>
+						<BottonAvailable />
+						<h2
+							class="purpletopink text-center font-cascadiacode text-5xl font-bold tracking-tight sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl"
+						>
+							Hola, soy Manuel Denis
+						</h2>
+						<h3 class="text-center text-3xl font-extralight lg:text-left">
+							Soy diseñador gráfico, diseñador UX/UI y desarrollador web front-end.
+						</h3>
+						<div class="flex flex-col gap-8 lg:flex-row">
+							<button class="boton text-lg">Proyectos</button>
+							<button class="boton text-lg">LinkedIn</button>
+						</div>
+					</aside>
+					<figure class="hidden aspect-[3/4] w-40 object-center lg:flex">
+						<img
+							class="object-cover"
+							src="/img/mandendev-foto-perfil.jpg"
+							alt="Manuel Denis Developer - mandendev"
+						/>
+					</figure>
+				</div>
+			</section>
+			<!-- <section>
+				<p>
+					Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje
+					constante. Con habilidades en tecnologías front-end y back-end, estoy listo para aportar
+					soluciones innovadoras. Descubre mi portafolio para ver mis proyectos más recientes y mi
+					crecimiento en el campo del desarrollo web.
+				</p>
+				
+				<p>
+					Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje
+					constante. Con habilidades en tecnologías front-end y back-end, estoy listo para aportar
+					soluciones innovadoras. Descubre mi portafolio para ver mis proyectos más recientes y mi
+					crecimiento en el campo del desarrollo web.
+				</p>
+			</section> -->
+		</main>
+	</div>
+</Layout>
+
+<style></style>

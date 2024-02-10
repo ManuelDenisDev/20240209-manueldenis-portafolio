@@ -1,0 +1,88 @@
+---
+import '@fontsource-variable/inter' // Supports weights 100-900
+import '../styles/main.css'
+
+interface Props {
+	title: string
+	description: string // Add the 'description' property
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="block h-screen w-screen bg-black text-white antialiased">
+		<div
+			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		>
+		</div>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		font-family: 'Inter Variable', sans-serif;
+	}
+	.link {
+		@apply text-white transition-all duration-300 hover:text-white/60;
+	}
+	.purpletopink {
+		@apply bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text font-extrabold text-transparent;
+	}
+	.pinktoorange {
+		@apply bg-gradient-to-r from-pink-600 to-orange-400 bg-clip-text font-extrabold text-transparent;
+	}
+	.orangetored {
+		@apply bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text font-extrabold text-transparent;
+	}
+	.bluetocyan {
+		@apply bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text font-extrabold text-transparent;
+	}
+	.redtoorange {
+		@apply bg-gradient-to-r from-red-400 to-orange-600 bg-clip-text font-extrabold text-transparent;
+	}
+	.hover-purpletopink {
+		@apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 hover:bg-clip-text  hover:text-transparent;
+	}
+	.hover-pinktoorange {
+		@apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-orange-400 hover:bg-clip-text hover:text-transparent;
+	}
+	.hover-orangetored {
+		@apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 hover:bg-clip-text  hover:text-transparent;
+	}
+	.hover-bluetocyan {
+		@apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-400 hover:to-cyan-600 hover:bg-clip-text  hover:text-transparent;
+	}
+	.hover-redtoorange {
+		@apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-red-400 hover:to-orange-600 hover:bg-clip-text  hover:text-transparent;
+	}
+	.bghover-purpletopink {
+		@apply from-purple-500 to-pink-600 hover:bg-gradient-to-r;
+	}
+	.bghover-pinktoorange {
+		@apply hover:bg-gradient-to-r hover:from-pink-600 hover:to-orange-400 hover:bg-clip-text hover:text-transparent;
+	}
+	.bghover-orangetored {
+		@apply hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 hover:bg-clip-text  hover:text-transparent;
+	}
+	.bghover-bluetocyan {
+		@apply hover:bg-gradient-to-r hover:from-blue-400 hover:to-cyan-600 hover:bg-clip-text  hover:text-transparent;
+	}
+	.bghover-redtoorange {
+		@apply hover:bg-gradient-to-r hover:from-red-400 hover:to-orange-600 hover:bg-clip-text  hover:text-transparent;
+	}
+
+	
+</style>
