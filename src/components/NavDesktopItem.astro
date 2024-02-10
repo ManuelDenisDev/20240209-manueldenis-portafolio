@@ -1,0 +1,17 @@
+---
+import type {MenuItem} from '../types/types';
+
+interface Props extends MenuItem {}
+
+const {name, url, decoration} = Astro.props;
+---
+
+<li>
+	<a class={decoration} href={url}>{name}</a>
+</li>
+
+<style>
+	a {
+		@apply decoration-wavy underline-offset-4 hover:underline;
+	}
+</style>

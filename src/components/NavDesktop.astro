@@ -1,0 +1,14 @@
+---
+import menuItems from '../data/menuItemsData';
+import NavDesktopItem from './NavDesktopItem.astro';
+---
+
+<ul>
+	{menuItems.map((item) => <NavDesktopItem {...item} />)}
+</ul>
+
+<style>
+	ul {
+		@apply hidden flex-row items-center lg:ml-2 lg:flex lg:gap-8 xl:ml-16 xl:gap-16;
+	}
+</style>

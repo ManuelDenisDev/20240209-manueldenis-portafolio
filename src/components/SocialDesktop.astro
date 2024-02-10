@@ -1,0 +1,20 @@
+---
+import IconLinkedIn from '../icons/IconLinkedIn.astro';
+import IconGitHub from '../icons/IconGitHub.astro';
+import IconX from '../icons/IconX.astro';
+---
+
+<div>
+	<a href="https://github.com/ManuelDenisDev" target="_blank"><IconGitHub class="w-6" /></a>
+	<a href="https://www.linkedin.com/in/manueldenisdev/"><IconLinkedIn class="w-6" /></a>
+	<a href="https://twitter.com/manDenDev" target="_blank"><IconX class="w-6" /></a>
+</div>
+
+<style>
+	div {
+		@apply hidden items-center lg:flex lg:gap-4;
+	}
+	a {
+		@apply text-white transition-all duration-300 hover:text-white/60;
+	}
+</style>
