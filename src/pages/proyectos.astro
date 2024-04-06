@@ -1,0 +1,140 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import BottonAvailable from '@/components/BottonAvailable.astro';
+
+import IconAdobeColor from '@/icons/IconAdobeColor.astro';
+import IconAdobeIllustrator from '@/icons/IconAdobeIllustrator.astro';
+import IconAdobePhotoshop from '@/icons/IconAdobePhotoshop.astro';
+import IconHTML5 from '@/icons/IconHTML5.astro';
+import IconCSS from '@/icons/IconCSS.astro';
+import IconJavaScript from '@/icons/IconJavaScript.astro';
+import IconAstro from '@/icons/IconAstro.astro';
+import IconTailwindCSS from '@/icons/IconTailwindCSS.astro';
+import MenuWrapper from '@/components/MenuWrapper.astro';
+import MenuContainer from '@/components/MenuContainer.astro';
+import Footer from '@/components/Footer.astro';
+import ButtonProyectos from '@/components/ButtonProyectos.astro';
+import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
+
+const TAGS = {
+	ADOBECOLOR: {
+		name: 'Adobe Color',
+		class: 'bg-white text-[#131529]',
+		icon: IconAdobeColor,
+	},
+	ADOBEILLUSTRATOR: {
+		name: 'Adobe Illustrator',
+		class: 'bg-[#FF9A00] text-[#330000]',
+		icon: IconAdobeIllustrator,
+	},
+	ADOBEPHOTOSHOP: {
+		name: 'Adobe Photoshop',
+		class: 'bg-[#31A8FF] text-[#001E36]',
+		icon: IconAdobePhotoshop,
+	},
+	HTML5: {
+		name: 'HTML5',
+		class: 'bg-[#ef652a] text-white',
+		icon: IconHTML5,
+	},
+	CSS3: {
+		name: 'CSS3',
+		class: 'bg-[#0c73b8] text-white',
+		icon: IconCSS,
+	},
+	JAVASCRIPT: {
+		name: 'JavaScript',
+		class: 'bg-gray-800 text-[#f0db4f]',
+		icon: IconJavaScript,
+	},
+	ASTRO: {
+		name: 'Astro',
+		class: 'bg-black text-white',
+		icon: IconAstro,
+	},
+	TAILWINDCSS: {
+		name: 'Tailwind',
+		class: 'bg-white text-[#0ED7B5]',
+		icon: IconTailwindCSS,
+	},
+};
+
+const PROJECTS = [
+	{
+		name: 'Re-Branding Botanic',
+		description: 'Transformando la imagen a un proyecto que apuesta por la renovación conservando las raíces.',
+		link: '#',
+		behance: '#',
+		image: '/assets/img/proyectos/botanic-rebranding-01.webp',
+		tags: [TAGS.ADOBECOLOR, TAGS.ADOBEILLUSTRATOR, TAGS.ADOBEPHOTOSHOP],
+	},
+	{
+		name: 'Sitio Web Peña Vikingos del Sur',
+		description:
+			'Como profesional especializado en branding y desarrollo web, mi misión en Peña Vikingos del Sur es fusionar la esencia y visión de la marca con una experiencia digital única. Con un enfoque centrado en el usuario y la creatividad, estoy comprometido/a a crear una identidad de marca cohesiva y un sitio web innovador que refleje la pasión y excelencia de Peña Vikingos del Sur en el mundo del diseño de interiores. Con una combinación de habilidades en diseño gráfico, desarrollo web y estrategia de marca, estoy aquí para ayudar a Peña Vikingos del Sur a destacarse en línea y cautivar a su audiencia con una presencia digital impactante y memorable.',
+		link: '#',
+		behance: '#',
+		image: '/assets/img/proyectos/botanic-rebranding-01.webp',
+		tags: [TAGS.HTML5, TAGS.CSS3, TAGS.JAVASCRIPT, TAGS.ASTRO, TAGS.TAILWINDCSS],
+	},
+	{
+		name: 'Sitio Web Elena Cibaja - Interiorismo',
+		description:
+			'Como profesional especializado en branding y desarrollo web, mi misión en Elena Cibaja - Interiorismo es fusionar la esencia y visión de la marca con una experiencia digital única. Con un enfoque centrado en el usuario y la creatividad, estoy comprometido/a a crear una identidad de marca cohesiva y un sitio web innovador que refleje la pasión y excelencia de Elena Cibaja - Interiorismo en el mundo del diseño de interiores. Con una combinación de habilidades en diseño gráfico, desarrollo web y estrategia de marca, estoy aquí para ayudar a Elena Cibaja a destacarse en línea y cautivar a su audiencia con una presencia digital impactante y memorable.',
+		link: '#',
+		behance: '#',
+		image: '/assets/img/proyectos/elenacibaja-sitioweb-01.webp',
+		tags: [TAGS.HTML5, TAGS.CSS3, TAGS.JAVASCRIPT, TAGS.ASTRO, TAGS.TAILWINDCSS],
+	},
+];
+---
+
+<!-- Contenedor Principal -->
+<Layout
+	title="<ManuelDenis developer={full.Stack} content={portafolio} />"
+	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
+	<!-- Contenedor de la pagina principal -->
+	<main class="mx-auto max-w-md px-4 pt-20 lg:max-w-7xl">
+		<section class="content-container relative grid justify-center">
+			<div class="flex flex-col items-center gap-16">
+				<aside class="flex max-w-lg flex-col items-center justify-center gap-16 lg:items-start lg:gap-8">
+					<BottonAvailable />
+				</aside>
+				<div class="flex max-w-lg flex-col gap-8">
+					<h3 class="text-center text-3xl font-extralight lg:text-left">Proyectos</h3>
+					<ul class="flex flex-col gap-16 font-extralight">
+						{
+							PROJECTS.map(({name, description, tags, image}) => (
+								<li class="flex flex-col gap-4">
+									<article class="flex flex-col gap-3">
+										<h3 class="purpletopink font-cascadiacode text-lg lg:text-xl">{name}</h3>
+										<p class="text-justify">{description}</p>
+										<ul class="flex gap-x-4">
+											{tags.map((tag) => (
+												<li>
+													<span class={`flex items-center gap-x-1 rounded-full text-xs ${tag.class} px-2 py-1 font-bold`}>
+														<tag.icon class="size-6 rounded" />
+														{tag.name}
+													</span>
+												</li>
+											))}
+										</ul>
+										<img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura d epantalla del proyecto ${name}`} />
+									</article>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+				<div class="flex flex-col gap-8 lg:flex-row">
+					<ButtonProyectos />
+					<ButtonLinkedIn />
+				</div>
+			</div>
+			<Footer />
+		</section>
+	</main>
+</Layout>
+
+<style></style>

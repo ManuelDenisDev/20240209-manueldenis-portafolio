@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import BottonAvailable from '@/components/BottonAvailable.astro';
+
+import {basics} from '@cv';
+const {summary} = basics;
+---
+
+<!-- Contenedor Principal -->
+<Layout
+	title="<ManuelDenis developer={full.Stack} content={portafolio} />"
+	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
+	<!-- Contenedor de la pagina principal -->
+	<main class="mx-auto max-w-screen-xl px-4">
+		<section class="content-container relative grid content-center justify-center">
+			<div class="flex flex-col items-center justify-center gap-16">
+				<section class="flex max-w-lg flex-col items-center justify-center gap-16">
+					<BottonAvailable />
+					<h2 class="purpletopink animate-fade-up animate-infinite animate-ease-in-out text-center font-mono text-5xl font-bold tracking-tight">
+						¡Trabajemos juntos!
+					</h2>
+					<h3 class="text-center text-xl font-extralight lg:text-left">manueldenis.developer@gmail.com</h3>
+				</section>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style></style>

@@ -1,13 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import {basics} from '@cv';
 
 import BottonAvailable from '@/components/BottonAvailable.astro';
+
+import {basics} from '@cv';
 import ButtonProyectos from '@/components/ButtonProyectos.astro';
 import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
-
-const {name, label, email, phone, location, website, linkedin, github} = basics;
-const {city, region} = location;
+const {summary} = basics;
 ---
 
 <!-- Contenedor Principal -->
@@ -22,9 +21,10 @@ const {city, region} = location;
 					<BottonAvailable />
 					<h2
 						class="purpletopink animate-fade-up animate-infinite animate-ease-in-out text-center font-mono text-5xl font-bold tracking-tight sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl">
-						Hola, soy {name}
+						Hola, soy Manuel Denis
 					</h2>
-					<h3 class="text-center text-3xl font-extralight lg:text-left">Soy {label}.</h3>
+					<h3 class="text-center text-3xl font-extralight lg:text-left">Sobre Mi</h3>
+					<p class="text-center font-extralight lg:text-left">{summary}</p>
 					<div class="flex flex-col gap-8 lg:flex-row">
 						<ButtonProyectos />
 						<ButtonLinkedIn />

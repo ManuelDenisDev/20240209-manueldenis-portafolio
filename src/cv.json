@@ -1,0 +1,217 @@
+{
+	"basics": {
+		"name": "Manuel Denis",
+		"label": "Diseñador Gráfico, Diseñador UX/UI y Desarrollador Web Front-End",
+		"image": "/assets/img/mandendev-foto-perfil.jpg",
+		"email": "manueldenis.developer@gmail.com",
+		"phone": "+34 605322355",
+		"url": "https://midu.dev",
+		"summary": "+15 años de experiencia como Desarrollador Web y Diseñador Gráfico. Actualmente soy Desarrollador Web Front-End, Diseñador UX/UI y Creador de Marcas. Vivo en Algeciras, España. He trabajado en diferentes negocios locales: desde la creacion de la imagen de marca hasta el desarrollo de todo el contenido en las redes sociales.",
+		"location": {
+			"address": "",
+			"postalCode": "11201",
+			"city": "Algeciras",
+			"countryCode": "ES",
+			"region": "España"
+		},
+		"profiles": [
+			{
+				"network": "LinkedIn",
+				"username": "midudev",
+				"url": "https://linkedin.com/in/midudev"
+			},
+			{
+				"network": "X",
+				"username": "midudev",
+				"url": "https://x.com/midudev"
+			},
+			{
+				"network": "GitHub",
+				"username": "midudev",
+				"url": "https://github.com/midudev"
+			}
+		]
+	},
+	"work": [
+		{
+			"name": "Botanic",
+			"position": "Re-Branding",
+			"url": "https://twitch.tv/midudev",
+			"startDate": "2024-01-15",
+			"endDate": null,
+			"summary": "Transformando la imagen a un proyecto que apuesta por la renovación conservando las raíces.",
+			"highlights": ["Started the company"]
+		},
+		{
+			"name": "Peña Vikingos del Sur",
+			"position": "Branding y Desarrollo Web",
+			"url": "https://twitch.tv/midudev",
+			"startDate": "2023-10-01",
+			"endDate": null,
+			"summary": "Como profesional especializado en branding y desarrollo web, mi misión en Peña Vikingos del Sur es fusionar la esencia y visión de la marca con una experiencia digital única. Con un enfoque centrado en el usuario y la creatividad, estoy comprometido/a a crear una identidad de marca cohesiva y un sitio web innovador que refleje la pasión y excelencia de Peña Vikingos del Sur en el mundo del diseño de interiores. Con una combinación de habilidades en diseño gráfico, desarrollo web y estrategia de marca, estoy aquí para ayudar a Peña Vikingos del Sur a destacarse en línea y cautivar a su audiencia con una presencia digital impactante y memorable.",
+			"highlights": ["Started the company"]
+		},
+		{
+			"name": "Elena Cibaja - Interiorismo",
+			"position": "Branding y Desarrollo Web",
+			"url": "https://twitch.tv/midudev",
+			"startDate": "2024-04-01",
+			"endDate": null,
+			"summary": "Como profesional especializado en branding y desarrollo web, mi misión en Elena Cibaja - Interiorismo es fusionar la esencia y visión de la marca con una experiencia digital única. Con un enfoque centrado en el usuario y la creatividad, estoy comprometido/a a crear una identidad de marca cohesiva y un sitio web innovador que refleje la pasión y excelencia de Elena Cibaja - Interiorismo en el mundo del diseño de interiores. Con una combinación de habilidades en diseño gráfico, desarrollo web y estrategia de marca, estoy aquí para ayudar a Elena Cibaja a destacarse en línea y cautivar a su audiencia con una presencia digital impactante y memorable.",
+			"highlights": ["Started the company"]
+		}
+	],
+	"volunteer": [
+		{
+			"organization": "Organization",
+			"position": "Volunteer",
+			"url": "https://organization.com/",
+			"startDate": "2012-01-01",
+			"endDate": "2013-01-01",
+			"summary": "Description…",
+			"highlights": ["Awarded 'Volunteer of the Month'"]
+		}
+	],
+	"education": [
+		{
+			"institution": "Universitat Oberta de Catalunya",
+			"url": "https://www.uoc.edu/portal/es/index.html",
+			"area": "Ingeniero de Software",
+			"studyType": "Bachelor",
+			"startDate": "2003-01-01",
+			"endDate": "2009-01-01",
+			"score": "4.0",
+			"courses": ["DB1101 - Basic SQL"]
+		}
+	],
+	"awards": [
+		{
+			"title": "Award",
+			"date": "2014-11-01",
+			"awarder": "Company",
+			"summary": "There is no spoon."
+		}
+	],
+	"certificates": [
+		{
+			"name": "Certificate",
+			"date": "2021-11-07",
+			"issuer": "Company",
+			"url": "https://certificate.com"
+		}
+	],
+	"publications": [
+		{
+			"name": "Publication",
+			"publisher": "Company",
+			"releaseDate": "2014-10-01",
+			"url": "https://publication.com",
+			"summary": "Description…"
+		}
+	],
+	"skills": [
+		{
+			"name": "HTML",
+			"level": "Master",
+			"keywords": ["Desarrollo Web", "Frontend"]
+		},
+		{
+			"name": "CSS",
+			"level": "Master",
+			"keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+		},
+		{
+			"name": "JavaScript",
+			"level": "Master",
+			"keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+		},
+		{
+			"name": "Tailwind",
+			"level": "Avanzado",
+			"keywords": ["Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"]
+		},
+		{
+			"name": "TypeScript",
+			"level": "Avanzado",
+			"keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+		},
+		{
+			"name": "Node",
+			"level": "Avanzado",
+			"keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+		},
+		{
+			"name": "MySQL",
+			"level": "Avanzado",
+			"keywords": ["Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"]
+		},
+		{
+			"name": "Git",
+			"level": "Avanzado",
+			"keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+		},
+		{
+			"name": "GitHub",
+			"level": "Avanzado",
+			"keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"]
+		},
+		{
+			"name": "Next.js",
+			"level": "Avanzado",
+			"keywords": ["Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"]
+		},
+		{
+			"name": "React",
+			"level": "Avanzado",
+			"keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+		}
+	],
+	"languages": [
+		{
+			"language": "Spanish",
+			"fluency": "Native speaker"
+		},
+		{
+			"language": "English",
+			"fluency": "Advanced"
+		}
+	],
+	"interests": [
+		{
+			"name": "Wildlife",
+			"keywords": ["Ferrets", "Unicorns"]
+		}
+	],
+	"references": [
+		{
+			"name": "Jane Doe",
+			"reference": "Reference…"
+		}
+	],
+	"projects": [
+		{
+			"name": "Re-Branding Botanic",
+			"description": "Transformando la imagen a un proyecto que apuesta por la renovación conservando las raíces.",
+			"link": "#",
+			"behance": "#",
+			"image": "/assets/img/proyectos/botanic-rebranding-01.webp",
+			"tags": ["Adobe Color", "Adobe Illustrator", "Adobe Photoshop", "Branding", "Diseño Gráfico"]
+		},
+		{
+			"name": "Sitio Web Peña Vikingos del Sur",
+			"description": "Como profesional especializado en branding y desarrollo web, mi misión en Peña Vikingos del Sur es fusionar la esencia y visión de la marca con una experiencia digital única. Con un enfoque centrado en el usuario y la creatividad, estoy comprometido/a a crear una identidad de marca cohesiva y un sitio web innovador que refleje la pasión y excelencia de Peña Vikingos del Sur en el mundo del diseño de interiores. Con una combinación de habilidades en diseño gráfico, desarrollo web y estrategia de marca, estoy aquí para ayudar a Peña Vikingos del Sur a destacarse en línea y cautivar a su audiencia con una presencia digital impactante y memorable.",
+			"link": "#",
+			"behance": "#",
+			"image": "/assets/img/mandendev-botanic.jpg",
+			"tags": ["HTML 5", "Tailwind CSS", "JavaScript", "Astro", "Diseño UX/UI", "Desarrollo Web"]
+		},
+		{
+			"name": "Sitio Web Elena Cibaja - Interiorismo",
+			"description": "Como profesional especializado en branding y desarrollo web, mi misión en Elena Cibaja - Interiorismo es fusionar la esencia y visión de la marca con una experiencia digital única. Con un enfoque centrado en el usuario y la creatividad, estoy comprometido/a a crear una identidad de marca cohesiva y un sitio web innovador que refleje la pasión y excelencia de Elena Cibaja - Interiorismo en el mundo del diseño de interiores. Con una combinación de habilidades en diseño gráfico, desarrollo web y estrategia de marca, estoy aquí para ayudar a Elena Cibaja a destacarse en línea y cautivar a su audiencia con una presencia digital impactante y memorable.",
+			"link": "#",
+			"behance": "#",
+			"image": "/assets/img/mandendev-botanic.jpg",
+			"tags": ["HTML 5", "Tailwind CSS", "JavaScript", "Astro", "Diseño UX/UI", "Desarrollo Web"]
+		}
+	]
+}

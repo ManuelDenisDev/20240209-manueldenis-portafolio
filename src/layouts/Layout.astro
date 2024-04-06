@@ -1,6 +1,14 @@
 ---
 import '@fontsource-variable/inter'; // Supports weights 100-900
 import '../styles/main.css';
+import MenuWrapper from '../components/MenuWrapper.astro';
+import MenuContainer from '../components/MenuContainer.astro';
+import LogoNav from '../components/LogoNav.astro';
+import NavDesktop from '../components/NavDesktop.astro';
+import SocialDesktop from '../components/SocialDesktop.astro';
+import IconConfig from '../icons/IconConfig.astro';
+import IconMenu from '../icons/IconMenu.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -27,6 +35,42 @@ const {currentLocale} = Astro;
 		<div
 			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
 		</div>
+		<!-- Contenedor de las barras de navegacion -->
+		<MenuWrapper>
+			<MenuContainer>
+				<header class="bg-black/50">
+					<!-- Barra de navegacion Escritorio -->
+					<nav class="mx-auto flex h-[5rem] max-w-screen-2xl items-center justify-between px-4">
+						<LogoNav />
+						<NavDesktop />
+						<div class="ml-16 hidden lg:flex-1">
+							<button class="link hidden items-center lg:flex"><IconConfig class="w-6" /></button>
+						</div>
+						<SocialDesktop />
+						<button class="w-6 text-right lg:hidden"><IconMenu /></button>
+					</nav>
+					<!-- Barra de navegacion Movil -->
+					<div class="hidden bg-orange-800 lg:hidden">
+						<nav>
+							<ul>
+								<li><a href="/experiencia">Experiencia</a></li>
+								<li><a href="/proyecto">Proyectos</a></li>
+								<li><a href="/sobremi">Sobre mí</a></li>
+								<li><a href="/contacto">Contacto</a></li>
+							</ul>
+						</nav>
+						<div>
+							<div>
+								<a href="#">GH</a>
+								<a href="#">LI</a>
+							</div>
+							<button>¿Hablamos?</button>
+						</div>
+					</div>
+				</header>
+				<hr class="border-t border-white/10 shadow-lg" />
+			</MenuContainer>
+		</MenuWrapper>
 		<slot />
 	</body>
 </html>
