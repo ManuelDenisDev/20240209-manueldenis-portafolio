@@ -24,7 +24,7 @@ import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
 					<h3 class="text-center text-3xl font-extralight lg:text-left">Experiencia</h3>
 					<ul class="flex flex-col gap-8 font-extralight">
 						{
-							work.map(({name, startDate, endDate, position, summary, highlights}) => {
+							work.map(({name, startDate, endDate, position, summary}) => {
 								const startYear = new Date(startDate).getFullYear();
 								const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual';
 								const years = `${startYear} - ${endYear}`;
