@@ -97,17 +97,17 @@ const PROJECTS = [
 	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
 	<!-- Contenedor de la pagina principal -->
 	<MainContainer>
-		<section class="mx-auto flex max-w-md flex-col items-center gap-16">
+		<section class="mx-auto flex max-w-md flex-col items-center gap-16 lg:max-w-3xl">
 			<BottonAvailable />
 			<h3 class="text-center text-3xl font-extralight lg:text-left">Proyectos</h3>
-			<ul class="flex max-w-md flex-col gap-16 font-extralight">
+			<ul class="flex max-w-md flex-col gap-16 font-extralight lg:max-w-3xl">
 				{
 					PROJECTS.map(({name, description, tags, image}) => (
 						<li class="flex flex-col">
 							<article class="flex  flex-col gap-4">
 								<h3 class="purpletopink font-cascadiacode text-lg lg:text-xl">{name}</h3>
 								<p class="text-justify">{description}</p>
-								<ul class="flex flex-row flex-wrap justify-between gap-4">
+								<ul class="flex flex-row flex-wrap justify-between gap-4 lg:justify-start">
 									{tags.map((tag) => (
 										<li class="flex flex-wrap">
 											<span class={`flex  flex-nowrap items-center gap-x-1 rounded-full text-xs ${tag.class} px-2 py-1 font-bold`}>
