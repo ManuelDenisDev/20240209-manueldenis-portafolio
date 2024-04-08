@@ -5,8 +5,8 @@ import BottonAvailable from '@/components/BottonAvailable.astro';
 
 import {work} from '@cv';
 import Footer from '@/components/Footer.astro';
-import ButtonProyectos from '@/components/ButtonProyectos.astro';
-import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
+import MainContainer from '@/components/MainContainer.astro';
+import AsideButtonContainer from '@/components/AsideButtonContainer.astro';
 ---
 
 <!-- Contenedor Principal -->
@@ -14,52 +14,40 @@ import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
 	title="<ManuelDenis developer={full.Stack} content={portafolio} />"
 	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
 	<!-- Contenedor de la pagina principal -->
-	<main class="mx-auto max-w-md px-4 pt-20 lg:max-w-7xl">
-		<section class="content-container relative grid justify-center">
-			<div class="flex flex-col items-center gap-16">
-				<aside class="flex max-w-lg flex-col items-center justify-center gap-16 lg:items-start lg:gap-8">
-					<BottonAvailable />
-				</aside>
-				<div class="flex max-w-lg flex-col gap-8">
-					<h3 class="text-center text-3xl font-extralight lg:text-left">Experiencia</h3>
-					<ul class="flex flex-col gap-8 font-extralight">
-						{
-							work.map(({name, startDate, endDate, position, summary}) => {
-								const startYear = new Date(startDate).getFullYear();
-								const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual';
-								const years = `${startYear} - ${endYear}`;
-								return (
-									<li class="flex gap-8">
-										<article>
-											<header class="mb-1 flex items-start justify-between">
-												<div>
-													<h3 class="purpletopink font-cascadiacode text-base lg:text-lg">{name}</h3>
-													<h4 class="orangetored font-cascadiacode text-xs lg:text-base">{position}</h4>
-												</div>
-												<time class="bluetocyan font-cascadiacode text-base lg:text-lg">
-													<span class="orangetored">&#123</span>
-													{years}
-													<span class="redtoorange">&#125</span>
-												</time>
-											</header>
-											<footer class="text-justify">
-												<p>{summary}</p>
-											</footer>
-										</article>
-									</li>
-								);
-							})
-						}
-					</ul>
-				</div>
-				<div class="flex flex-col gap-8 lg:flex-row">
-					<ButtonProyectos />
-					<ButtonLinkedIn />
-				</div>
-			</div>
-			<Footer />
-		</section>
-		<!-- <section>
+	<MainContainer>
+		<BottonAvailable />
+		<section class="mx-auto flex max-w-md flex-col items-center gap-16 lg:max-w-3xl">
+			<h3 class="text-center text-3xl font-extralight lg:text-left">Experiencia</h3>
+			<ul class="flex flex-col gap-8 font-extralight">
+				{
+					work.map(({name, startDate, endDate, position, summary}) => {
+						const startYear = new Date(startDate).getFullYear();
+						const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual';
+						const years = `${startYear} - ${endYear}`;
+						return (
+							<li class="flex gap-8">
+								<article>
+									<header class="mb-1 flex flex-row justify-between">
+										<div>
+											<h3 class="purpletopink font-cascadiacode text-base lg:text-lg">{name}</h3>
+											<h4 class="orangetored font-cascadiacode text-xs lg:text-base">{position}</h4>
+										</div>
+										<time class="bluetocyan font-cascadiacode text-base lg:text-lg">
+											<span class="orangetored">&#123</span>
+											{years}
+											<span class="redtoorange">&#125</span>
+										</time>
+									</header>
+									<footer class="text-justify">
+										<p>{summary}</p>
+									</footer>
+								</article>
+							</li>
+						);
+					})
+				}
+			</ul>
+			<!-- <section>
 				<p>
 					Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje
 					constante. Con habilidades en tecnologías front-end y back-end, estoy listo para aportar
@@ -74,7 +62,10 @@ import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
 					crecimiento en el campo del desarrollo web.
 				</p>
 			</section> -->
-	</main>
+		</section>
+		<AsideButtonContainer />
+		<Footer />
+	</MainContainer>
 </Layout>
 
 <style></style>

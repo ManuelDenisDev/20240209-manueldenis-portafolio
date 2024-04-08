@@ -11,12 +11,9 @@ import IconCSS from '@/icons/IconCSS.astro';
 import IconJavaScript from '@/icons/IconJavaScript.astro';
 import IconAstro from '@/icons/IconAstro.astro';
 import IconTailwindCSS from '@/icons/IconTailwindCSS.astro';
-import MenuWrapper from '@/components/MenuWrapper.astro';
-import MenuContainer from '@/components/Container.astro';
 import Footer from '@/components/Footer.astro';
-import ButtonProyectos from '@/components/ButtonProyectos.astro';
-import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
 import MainContainer from '@/components/MainContainer.astro';
+import AsideButtonContainer from '@/components/AsideButtonContainer.astro';
 
 const TAGS = {
 	ADOBECOLOR: {
@@ -97,8 +94,8 @@ const PROJECTS = [
 	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
 	<!-- Contenedor de la pagina principal -->
 	<MainContainer>
+		<BottonAvailable />
 		<section class="mx-auto flex max-w-md flex-col items-center gap-16 lg:max-w-3xl">
-			<BottonAvailable />
 			<h3 class="text-center text-3xl font-extralight lg:text-left">Proyectos</h3>
 			<ul class="flex max-w-md flex-col gap-16 font-extralight lg:max-w-3xl">
 				{
@@ -123,11 +120,8 @@ const PROJECTS = [
 					))
 				}
 			</ul>
-			<div class="flex flex-col gap-8 lg:flex-row">
-				<ButtonProyectos />
-				<ButtonLinkedIn />
-			</div>
 		</section>
+		<AsideButtonContainer />
 		<Footer />
 	</MainContainer>
 </Layout>

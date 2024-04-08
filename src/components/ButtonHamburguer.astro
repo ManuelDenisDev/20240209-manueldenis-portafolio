@@ -1,0 +1,47 @@
+<button class="group relative z-[100] flex h-[20px] w-6 flex-col items-center justify-between lg:hidden" id="buttonHamburguer">
+	<span class="ease h-[2px] w-6 transform bg-gray-50 transition duration-300"></span>
+	<span class="ease h-[2px] w-6 transform bg-gray-50 transition duration-300"></span>
+	<span class="ease h-[2px] w-6 transform bg-gray-50 transition duration-300"></span>
+	<span class="ease h-[2px] w-6 transform bg-gray-50 transition duration-300"></span>
+</button>
+
+<style>
+	.openButtonHamburguerSup {
+		@apply translate-y-2 rotate-45 transform bg-pink-500;
+	}
+	.openButtonHamburguerCenter {
+		@apply opacity-0;
+	}
+	.openButtonHamburguerInf {
+		@apply -translate-y-[0.6rem] -rotate-45 bg-pink-500;
+	}
+</style>
+
+<script>
+	import {isSideMenuOpen} from '@/store/store';
+
+	let open = false;
+	const button = document.getElementById('buttonHamburguer');
+
+	const handleOpenSideMenu = () => {
+		open = !open;
+		isSideMenuOpen.set(open);
+	};
+
+	button?.addEventListener('click', handleOpenSideMenu);
+
+	isSideMenuOpen.subscribe((value) => {
+		open = value;
+		if (open) {
+			button.children[0].classList.add('openButtonHamburguerSup');
+			button.children[1].classList.add('openButtonHamburguerCenter');
+			button.children[2].classList.add('openButtonHamburguerCenter');
+			button.children[3].classList.add('openButtonHamburguerInf');
+		} else {
+			button.children[0].classList.remove('openButtonHamburguerSup');
+			button.children[1].classList.remove('openButtonHamburguerCenter');
+			button.children[2].classList.remove('openButtonHamburguerCenter');
+			button.children[3].classList.remove('openButtonHamburguerInf');
+		}
+	});
+</script>

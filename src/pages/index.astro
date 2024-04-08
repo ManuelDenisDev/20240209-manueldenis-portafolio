@@ -5,6 +5,7 @@ import {basics} from '@cv';
 import BottonAvailable from '@/components/BottonAvailable.astro';
 import ButtonProyectos from '@/components/ButtonProyectos.astro';
 import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
+import MainContainer from '@/components/MainContainer.astro';
 
 const {name, label} = basics;
 ---
@@ -14,27 +15,25 @@ const {name, label} = basics;
 	title="<ManuelDenis developer={full.Stack} content={portafolio} />"
 	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
 	<!-- Contenedor de la pagina principal -->
-	<main class="mx-auto max-w-screen-xl px-4">
-		<section class="content-container relative grid content-center justify-center">
-			<div class="flex flex-col items-center justify-center gap-16 lg:flex-row">
-				<aside class="flex max-w-lg flex-col items-center justify-center gap-16 lg:items-start lg:gap-8">
-					<BottonAvailable />
-					<h2
-						class="purpletopink animate-fade-up animate-infinite animate-ease-in-out text-center font-mono text-5xl font-bold tracking-tight sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl">
-						Hola, soy {name}
-					</h2>
-					<h3 class="text-center text-3xl font-extralight lg:text-left">Soy {label}.</h3>
-					<div class="flex flex-col gap-8 lg:flex-row">
-						<ButtonProyectos />
-						<ButtonLinkedIn />
-					</div>
-				</aside>
-				<figure class="hidden aspect-[3/4] w-40 object-center lg:flex">
-					<img class="object-cover" src="/assets/img/mandendev-foto-perfil.jpg" alt="Manuel Denis Developer - mandendev" />
-				</figure>
+	<MainContainer>
+		<section class="flex flex-col items-center justify-center gap-16 lg:flex-row mt-16">
+			<div class="flex max-w-lg flex-col items-center justify-center gap-16 lg:items-start lg:gap-8">
+				<BottonAvailable />
+				<h2
+					class="purpletopink animate-fade-up animate-infinite animate-ease-in-out text-center font-mono text-5xl font-bold tracking-tight sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl">
+					Hola, soy {name}
+				</h2>
+				<h3 class="text-center text-3xl font-extralight lg:text-left">Soy {label}.</h3>
+				<div class="flex flex-col gap-8 lg:flex-row">
+					<ButtonProyectos />
+					<ButtonLinkedIn />
+				</div>
 			</div>
+			<figure class="hidden aspect-[3/4] w-40 object-center lg:flex">
+				<img class="object-cover" src="/assets/img/mandendev-foto-perfil.jpg" alt="Manuel Denis Developer - mandendev" />
+			</figure>
 		</section>
-	</main>
+	</MainContainer>
 </Layout>
 
 <style></style>
