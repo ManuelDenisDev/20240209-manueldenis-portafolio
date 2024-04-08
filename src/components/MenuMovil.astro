@@ -28,11 +28,13 @@ import NavMobile from './NavMobile.astro';
 
 	const menuMovil = document.getElementById('menuMovil');
 
-	isSideMenuOpen.subscribe((open) => {
-		if (open) {
-			menuMovil.classList.remove('hidden');
-		} else {
-			menuMovil.classList.add('hidden');
-		}
-	});
+	if (menuMovil) {
+		isSideMenuOpen.subscribe((open) => {
+			if (open) {
+				menuMovil.classList.remove('hidden');
+			} else {
+				menuMovil.classList.add('hidden');
+			}
+		});
+	}
 </script>
