@@ -26,12 +26,7 @@ import NavMobile from './NavMobile.astro';
 <script>
 	import {isSideMenuOpen} from '@/store/store';
 
-	const buttonHamburguer = document.getElementById('buttonHamburguer');
 	const menuMovil = document.getElementById('menuMovil');
-
-	const handleCloseSideMenu = () => {
-		isSideMenuOpen.set(false);
-	};
 
 	isSideMenuOpen.subscribe((open) => {
 		if (open) {
