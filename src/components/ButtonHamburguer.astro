@@ -28,20 +28,22 @@
 		isSideMenuOpen.set(open);
 	};
 
-	button.addEventListener('click', handleOpenSideMenu);
+	if (button) {
+		button.addEventListener('click', handleOpenSideMenu);
 
-	isSideMenuOpen.subscribe((value) => {
-		open = value;
-		if (open) {
-			button.children[0].classList.add('openButtonHamburguerSup');
-			button.children[1].classList.add('openButtonHamburguerCenter');
-			button.children[2].classList.add('openButtonHamburguerCenter');
-			button.children[3].classList.add('openButtonHamburguerInf');
-		} else {
-			button.children[0].classList.remove('openButtonHamburguerSup');
-			button.children[1].classList.remove('openButtonHamburguerCenter');
-			button.children[2].classList.remove('openButtonHamburguerCenter');
-			button.children[3].classList.remove('openButtonHamburguerInf');
-		}
-	});
+		isSideMenuOpen.subscribe((value) => {
+			open = value;
+			if (open) {
+				button.children[0].classList.add('openButtonHamburguerSup');
+				button.children[1].classList.add('openButtonHamburguerCenter');
+				button.children[2].classList.add('openButtonHamburguerCenter');
+				button.children[3].classList.add('openButtonHamburguerInf');
+			} else {
+				button.children[0].classList.remove('openButtonHamburguerSup');
+				button.children[1].classList.remove('openButtonHamburguerCenter');
+				button.children[2].classList.remove('openButtonHamburguerCenter');
+				button.children[3].classList.remove('openButtonHamburguerInf');
+			}
+		});
+	}
 </script>
