@@ -51,9 +51,6 @@ const genericHamburgerLine = `h-[2px] ${width} bg-gray-300 transition ease trans
 				<nav class="flex h-[5rem] items-center justify-between px-4">
 					<LogoNav />
 					<NavDesktop />
-					<div class="ml-16 hidden lg:flex-1">
-						<button class="link hidden items-center lg:flex"><IconConfig class="w-6" /></button>
-					</div>
 					<SocialDesktop />
 					<button
 						id="menuButton"
@@ -69,7 +66,7 @@ const genericHamburgerLine = `h-[2px] ${width} bg-gray-300 transition ease trans
 				</nav>
 				<!-- Barra de navegacion Movil -->
 
-				<div class="fixed bottom-0 left-0 right-0 top-0 z-50 lg:hidden" id="menuOpen">
+				<div class="fixed bottom-0 left-0 right-0 top-0 z-50 hidden lg:hidden" id="menuOpen">
 					<div
 						class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
 					</div>

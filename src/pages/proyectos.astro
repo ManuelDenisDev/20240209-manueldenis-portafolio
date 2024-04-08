@@ -16,20 +16,21 @@ import MenuContainer from '@/components/Container.astro';
 import Footer from '@/components/Footer.astro';
 import ButtonProyectos from '@/components/ButtonProyectos.astro';
 import ButtonLinkedIn from '@/components/ButtonLinkedIn.astro';
+import MainContainer from '@/components/MainContainer.astro';
 
 const TAGS = {
 	ADOBECOLOR: {
-		name: 'Adobe Color',
+		name: 'AdobeColor',
 		class: 'bg-white text-[#131529]',
 		icon: IconAdobeColor,
 	},
 	ADOBEILLUSTRATOR: {
-		name: 'Adobe Illustrator',
+		name: 'Illustrator',
 		class: 'bg-[#FF9A00] text-[#330000]',
 		icon: IconAdobeIllustrator,
 	},
 	ADOBEPHOTOSHOP: {
-		name: 'Adobe Photoshop',
+		name: 'Photoshop',
 		class: 'bg-[#31A8FF] text-[#001E36]',
 		icon: IconAdobePhotoshop,
 	},
@@ -95,46 +96,40 @@ const PROJECTS = [
 	title="<ManuelDenis developer={full.Stack} content={portafolio} />"
 	description='"Desarrollador Web Full Stack Junior apasionado por la tecnología y el aprendizaje constante. Descubre mi portafolio para ver mis proyectos más recientes y mi crecimiento en el campo del desarrollo web."'>
 	<!-- Contenedor de la pagina principal -->
-	<main class="mx-auto max-w-md px-4 pt-20 lg:max-w-7xl">
-		<section class="content-container relative grid justify-center">
-			<div class="flex flex-col items-center gap-16">
-				<aside class="flex max-w-lg flex-col items-center justify-center gap-16 lg:items-start lg:gap-8">
-					<BottonAvailable />
-				</aside>
-				<div class="flex max-w-lg flex-col gap-8">
-					<h3 class="text-center text-3xl font-extralight lg:text-left">Proyectos</h3>
-					<ul class="flex flex-col gap-16 font-extralight">
-						{
-							PROJECTS.map(({name, description, tags, image}) => (
-								<li class="flex flex-col gap-4">
-									<article class="flex flex-col gap-3">
-										<h3 class="purpletopink font-cascadiacode text-lg lg:text-xl">{name}</h3>
-										<p class="text-justify">{description}</p>
-										<ul class="flex gap-x-4">
-											{tags.map((tag) => (
-												<li>
-													<span class={`flex items-center gap-x-1 rounded-full text-xs ${tag.class} px-2 py-1 font-bold`}>
-														<tag.icon class="size-6 rounded" />
-														{tag.name}
-													</span>
-												</li>
-											))}
-										</ul>
-										<img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura d epantalla del proyecto ${name}`} />
-									</article>
-								</li>
-							))
-						}
-					</ul>
-				</div>
-				<div class="flex flex-col gap-8 lg:flex-row">
-					<ButtonProyectos />
-					<ButtonLinkedIn />
-				</div>
+	<MainContainer>
+		<section class="mx-auto flex max-w-md flex-col items-center gap-16">
+			<BottonAvailable />
+			<h3 class="text-center text-3xl font-extralight lg:text-left">Proyectos</h3>
+			<ul class="flex max-w-md flex-col gap-16 font-extralight">
+				{
+					PROJECTS.map(({name, description, tags, image}) => (
+						<li class="flex flex-col">
+							<article class="flex  flex-col gap-4">
+								<h3 class="purpletopink font-cascadiacode text-lg lg:text-xl">{name}</h3>
+								<p class="text-justify">{description}</p>
+								<ul class="flex flex-row flex-wrap justify-between gap-4">
+									{tags.map((tag) => (
+										<li class="flex flex-wrap">
+											<span class={`flex  flex-nowrap items-center gap-x-1 rounded-full text-xs ${tag.class} px-2 py-1 font-bold`}>
+												<tag.icon class="size-6 rounded" />
+												{tag.name}
+											</span>
+										</li>
+									))}
+								</ul>
+								<img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura d epantalla del proyecto ${name}`} />
+							</article>
+						</li>
+					))
+				}
+			</ul>
+			<div class="flex flex-col gap-8 lg:flex-row">
+				<ButtonProyectos />
+				<ButtonLinkedIn />
 			</div>
-			<Footer />
 		</section>
-	</main>
+		<Footer />
+	</MainContainer>
 </Layout>
 
 <style></style>
